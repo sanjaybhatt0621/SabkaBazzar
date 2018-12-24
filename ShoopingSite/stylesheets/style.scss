@@ -1,3 +1,7 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,600,700';
+*{
+    font-family: Dosis;
+}
 $desktop:980px;
 
 @mixin desktop
@@ -53,22 +57,22 @@ $colors :
       content: '';
       content: none; } }
   
-  table {
-    border-collapse: collapse;
-    border-spacing: 0; }
+
+*
+{
+    font-size:0.85em;
+}
 
 
 
 
-
-    .header
-    {
-        border-bottom: 3px solid #cccccc;
-    }
+    
     .footer
     {
         background-color: #cccccc;
-        // font-size: small; //mobile
+        font-size: small; 
+        text-align: center;
+        padding: 3%;
     }
 
 
@@ -104,8 +108,8 @@ body
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 16px 6px 25px 8px #cccccc;
-    border-bottom: 30px;  
+    // box-shadow: 16px 6px 25px 8px #cccccc;
+    // border-bottom: 3px solid #cccccc;
     .logo
     {
         width:40%;
@@ -154,6 +158,9 @@ body
     
 
 }
+
+
+                                    
 .mainHome
 {
         .slider
@@ -198,6 +205,8 @@ body
                 display: flex;
                 flex-direction: row;
                 margin: 5% auto;
+                // border-bottom: 2px solid #cccccc;
+                // box-shadow: 0px 0px 25px 7px #cccccc;
                 .menu-items
                 {
                     display: flex;
@@ -217,7 +226,7 @@ body
                     *
                     {
                         margin:5% auto;
-                        font-size:0.85em;
+                        
                         display: inline-block;
                     }
                     a

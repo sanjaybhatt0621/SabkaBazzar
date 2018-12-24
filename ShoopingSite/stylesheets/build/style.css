@@ -1,3 +1,8 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,600,700';
+* {
+  font-family: Dosis;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -33,17 +38,15 @@ q:before, q:after {
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.header {
-  border-bottom: 3px solid #cccccc;
+* {
+  font-size: 0.85em;
 }
 
 .footer {
   background-color: #cccccc;
+  font-size: small;
+  text-align: center;
+  padding: 3%;
 }
 
 @media (min-width: 900px) {
@@ -64,8 +67,6 @@ body .containner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 16px 6px 25px 8px #cccccc;
-  border-bottom: 30px;
 }
 .header .logo {
   width: 40%;
@@ -137,7 +138,6 @@ body .containner {
 }
 .mainHome .category-containner .category .description * {
   margin: 5% auto;
-  font-size: 0.85em;
   display: inline-block;
 }
 .mainHome .category-containner .category .description a {
