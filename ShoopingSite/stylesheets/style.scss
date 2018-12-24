@@ -2,7 +2,8 @@
 *{
     font-family: Dosis;
 }
-$desktop:980px;
+
+$desktop: 900px;
 
 @mixin desktop
 {
@@ -22,10 +23,6 @@ $colors :
 {
      @return map-get($colors, $color-name)
 }
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
@@ -77,19 +74,7 @@ $colors :
 
 
 
-@media (min-width:900px)
-{
-        .header , .footer
-        {
-            padding: 0.5% 10%;
-        }
-       
-        .mainHome
-        {
-            margin:0 10%;
-        }
 
-}
 ////////////////////////////////////////
 
 
@@ -110,20 +95,45 @@ body
     justify-content: space-between;
     // box-shadow: 16px 6px 25px 8px #cccccc;
     // border-bottom: 3px solid #cccccc;
-    .logo
+   
+    @include desktop
     {
-        width:40%;
+        margin: 0px;
+        padding: 0 10%;
+            //     .nav-menu
+            // {
+            //     display: inline-block;
+            // }
     }
-    .logo img
-    {
-        width:65%;
-        margin:5%;
+   .topLeft
+    { 
+        width:40%;
+        display: flex;
+        flex-direction: row;
+        .logo
+            {
+                width:100%;
+
+                @include desktop
+                {
+                    width: 40%;
+                }
+            }
+            .logo img
+            {
+                width:65%;
+                margin:5%;
+            }
     }
     .topRight
     {
         width: 35%;
         background-color: #cccccc;
-        
+        @include desktop
+        {
+            width: 13%;
+            background-color: #ffffff;
+        }
        .cart
        {
            display: flex;
@@ -155,14 +165,35 @@ body
     {
         display: none;
     }
-    
+    @include desktop
+    {
+        article nav , .topRight .login
+        {
+            display: inline-block;
+        }
+    }
 
+}
+.footer
+{
+    @include desktop
+    {
+        margin: 0px;
+        padding: 1% 10%;
+        text-align: left;
+        font-size: medium;
+    }
 }
 
 
                                     
 .mainHome
 {
+    @include desktop
+    {
+        margin:0 10%;
+        
+    }
         .slider
         {
                 img
@@ -222,12 +253,17 @@ body
                 {
                     width:65%;
                     text-align: center;
-
+                    display: flex;
+                    flex-direction: column;
                     *
                     {
                         margin:5% auto;
                         
                         display: inline-block;
+                        @include desktop
+                        {
+                            margin:2% auto;
+                        }
                     }
                     a
                     {
