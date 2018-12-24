@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  border-bottom: 3px solid #cccccc;
+}
+
+.footer {
+  background-color: #cccccc;
+}
+
+@media (min-width: 900px) {
+  .header, .footer {
+    padding: 0.5% 10%;
+  }
+
+  .mainHome {
+    margin: 0 10%;
+  }
+}
+body .containner {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 16px 6px 25px 8px #cccccc;
+  border-bottom: 30px;
+}
+.header .logo {
+  width: 40%;
+}
+.header .logo img {
+  width: 65%;
+  margin: 5%;
+}
+.header .topRight {
+  width: 35%;
+  background-color: #cccccc;
+}
+.header .topRight .cart {
+  display: flex;
+}
+.header .topRight .cart .cartImage {
+  width: 100%;
+  padding-left: 5%;
+}
+.header .topRight .cart .cartImage img {
+  width: 35%;
+  float: left;
+  margin-top: 8%;
+}
+.header .topRight .cart .cartImage span {
+  float: left;
+  margin-top: 18%;
+}
+.header article nav, .header .topRight .login {
+  display: none;
+}
+
+.mainHome .slider img {
+  width: 100%;
+  height: 100%;
+}
+.mainHome .category-containner {
+  display: flex;
+  flex-direction: column;
+}
+.mainHome .category-containner .category:nth-child(odd) .menu-items {
+  order: 1;
+}
+.mainHome .category-containner .category:nth-child(odd) .description {
+  order: 2;
+}
+.mainHome .category-containner .category:nth-child(even) .menu-items {
+  order: 2;
+}
+.mainHome .category-containner .category:nth-child(even) .description {
+  order: 1;
+}
+.mainHome .category-containner .category {
+  display: flex;
+  flex-direction: row;
+  margin: 5% auto;
+}
+.mainHome .category-containner .category .menu-items {
+  display: flex;
+  align-items: center;
+  width: 35%;
+}
+.mainHome .category-containner .category .menu-items img {
+  width: 100%;
+}
+.mainHome .category-containner .category .description {
+  width: 65%;
+  text-align: center;
+}
+.mainHome .category-containner .category .description * {
+  margin: 5% auto;
+  font-size: 0.85em;
+  display: inline-block;
+}
+.mainHome .category-containner .category .description a {
+  background-color: #BD2A57;
+  color: white;
+  padding: 3%;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
