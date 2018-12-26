@@ -124,11 +124,34 @@ body
                 width:65%;
                 margin:5%;
             }
+         .nav-menu
+         {
+                @include desktop
+            {
+                display: flex;
+                align-items: center;
+                margin-left: 25%;
+                nav ul
+                {
+                    display:flex;
+                    flex-direction: row;
+                    
+                    li 
+                    { margin-right: 30%;
+                        a
+                        {
+                            text-decoration: none;
+                            color:inherit;
+                        }
+                    }    
+                }
+            }  
+         }   
     }
     .topRight
     {
         width: 35%;
-        background-color: #cccccc;
+        
         @include desktop
         {
             width: 13%;
@@ -137,7 +160,7 @@ body
        .cart
        {
            display: flex;
-           
+           background-color: #cccccc;
              
                     .cartImage  
                     {
@@ -167,10 +190,19 @@ body
     }
     @include desktop
     {
-        article nav , .topRight .login
+        article nav 
         {
             display: inline-block;
         }
+        .topRight .login
+        {
+            display:flex;
+            width: 70%;
+            justify-content: space-between;
+            margin-left: auto;
+            
+        }
+
     }
 
 }

@@ -1,0 +1,86 @@
+@import "style.scss";
+
+.loginMain
+{
+    margin-left: 13%;
+    display: flex;
+    flex-direction: row;
+
+    
+    .leftLogin
+    {
+        margin: 3%;
+        h1
+        {
+            font-size: 240%;
+        }
+        h1 , p
+        {
+            padding: 3% 0;
+           display: block;
+        }
+    }
+
+        .rightLogin
+        {
+            margin:2% 0;
+            form article
+            {
+                
+                margin:3% 0;
+                .inputText
+                {
+                    border:none;
+                    border-bottom: 2px solid #cccccc;
+                    padding-left: 5%;
+                    background-color: inherit;
+                    background-image: none;
+
+                    :focus
+                    {
+                        border:none;
+                        border-bottom: 2px solid #cccccc;
+                    
+                    }
+                }
+
+                a
+                {
+                    background-color: #BD2A57;
+                    display: block;
+                    color: #ffffff;
+                    text-align: center;
+                    padding:3%;
+                    text-decoration: none;
+                }
+            }
+
+            input:focus ~ .floating-label,
+            input:not(:focus):valid ~ .floating-label{
+            top: 8px;
+            bottom: 10px;
+            left: 20px;
+            font-size: 11px;
+            opacity: 1;
+            }
+    
+            .inputText {
+            font-size: 14px;
+            width: 400px;
+            height: 65px;
+            
+            }
+            .textfield
+            {
+                position: relative;
+            }
+    
+            .floating-label {
+            position: absolute;
+            pointer-events: none;
+            left: 20px;
+            top: 18px;
+            transition: 0.2s ease all;
+            }
+        }
+}
