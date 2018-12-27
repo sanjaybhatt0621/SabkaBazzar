@@ -4,7 +4,7 @@ export default class ShoopingCartHomePage
 {
     constructor(keyItem)
     {
-        this.ShoopingCartHomePage = new ShoopingCartHomePage;
+       this.servicesFile = new servicesFile();
         this.keyItem = keyItem;
         this.render();
     }
@@ -22,14 +22,17 @@ export default class ShoopingCartHomePage
                     if(flag=="true")
                     {
                         let markup = 
-                        `<article class="menu-items">
+                        `
+                        <section class="category ">
+                        <article class="menu-items">
                                 <img src="${contentData.imageUrl}"/>
                             </article>
                             <article class="description">
                                 <h2>${contentData.name}</h2>
                                 <p>${contentData.description}</p>
-                                <a href="">${bannerData.key}</a>
-                        </article>`;
+                                <a href="">${contentData.key}</a>
+                        </article>
+                        </section>`;
 
                         $(this.keyItem).append(markup);
                     }

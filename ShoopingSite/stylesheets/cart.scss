@@ -1,0 +1,149 @@
+@import "style.scss";
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,600,700';
+
+
+*
+{
+    background-color: #eeeeee;
+}
+.mainwrapper
+{
+    
+
+    footer
+    {
+        position:fixed;
+        bottom: 0;
+        text-align: center;
+        width:100%;
+        background-color: #ffffff;
+        p
+        {
+           font-size: 0.9em;
+           padding:2%;
+           background-color: inherit;
+        }
+        a
+        {
+            background-color: inherit;
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #BD2A57;
+            padding:3% 5%;
+            font-weight: 800;
+            // border: 2px solid #BD2A57;
+            // border-radius: 5%;
+            margin:2%;
+            span
+            {
+                background-color: inherit;
+            }
+        }
+    }
+}
+.cart-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    .count
+    {
+        background-color: #ffffff;
+        padding:3% 5%;
+
+        h1 , span
+        {
+        display: inline-block;
+        background-color: inherit;
+        }
+        h1
+        {
+            font-size: 1.3em;
+        }
+    }
+
+    .item-cart-containner
+    {
+        .cart-item
+        {
+            display:flex;
+            flex-direction: row;
+            background-color: #ffffff;
+            padding: 3%;
+                        .item-img
+                    {
+                        width: 20%;
+                    
+                        img
+                        {
+                            width: 100%;
+                        }
+                    }
+                    .item-content
+                    {
+                        width: 80%;
+                        background-color: inherit;
+                        padding-left: 2%;
+                        p , span , h1
+                        {
+                            background-color: inherit;  
+                        }
+                        h1
+                        {
+                            font-size:1.2em;
+                        }
+                        p
+                        {
+                            padding: 4% 0%;
+                            font-size: 1.2em;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            span
+                            {
+                                padding: 0% 3%;
+                            }
+                            .leftCalc
+                            {
+                                width:60%;
+                                .cartButton
+                                {
+                                
+                                    color: #ffffff;
+                                    background-color: #BD2A57;
+                                    padding:1% 5%;
+                                }
+                            }
+                            
+                        }
+                    }
+        }
+        
+    }
+
+    .bottom-logo
+    {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #ffffff;  
+        justify-content: flex-start;
+        padding:3% ;
+        span , article 
+        {
+            background-color: inherit;
+        }
+        img
+        {
+            height: 2.5em;
+            background-color: inherit;
+        }
+        span
+        {
+            padding-left: 5%;
+        }
+    }
+    
+}
+

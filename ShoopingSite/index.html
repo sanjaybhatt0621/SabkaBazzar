@@ -6,7 +6,10 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/build/style.css" />
-    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="containner">
@@ -28,8 +31,8 @@
                     </section> 
                 <section class="topRight">
                     <article class="login">
-                        <span>SignIn</span>
-                        <span>Register</span>
+                        <span><a href="login.html">SignIn</a></span>
+                        <span><a href="register.html">Register</a></span>
                     </article>
                     <article class="cart">
                         <span class="cartImage">
@@ -45,19 +48,10 @@
                 <img src="images/offers/offer5.jpg"/>
             </section>
             <section class="category-containner">
-                <section class="category ">
-                    <article class="menu-items">
-                        <img src="images/category/fruits.png"/>
-                    </article>
-                    <article class="description">
-                        <h2>Fruits & Vegetables</h2>
-                        <p>A variety of fresh fruits and vegetables.</p>
-                        <a href="">Explore friut-and-veg</a>
-                    </article>
-                </section>
+                
                 
 
-                <section class="category">
+                <!-- <section class="category">
                         <article class="menu-items">
                             <img src="images/category/bakery.png"/>
                         </article>
@@ -99,13 +93,13 @@
                             <p>Shop online for Baby Products, Diapers, Skin Care Products,etc</p>
                             <a href="">Explore Baby</a>
                         </article>
-                </section>
+                </section> -->
             </section>
         </main>
         <footer class="footer">
             Copyright &#9400; 2011-2018 Sabka Bazzar Grocery Supplies Pvt Ltd
         </footer>
     </div>
-    <script src="./static/index.js"></script>
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>
