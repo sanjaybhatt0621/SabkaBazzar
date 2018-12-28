@@ -211,6 +211,17 @@ body .containner {
   background-color: #eeeeee;
 }
 
+.header {
+  margin-bottom: 3%;
+  background-color: #ffffff;
+}
+.header .topLeft .logo {
+  background-color: #ffffff;
+}
+.header .topRight {
+  background-color: #eeeeee;
+}
+
 .mainwrapper footer {
   position: fixed;
   bottom: 0;
@@ -243,6 +254,7 @@ body .containner {
   flex-direction: column;
 }
 .cart-wrapper .count {
+  margin: 3% 0%;
   background-color: #ffffff;
   padding: 3% 5%;
 }
@@ -301,6 +313,7 @@ body .containner {
   background-color: #ffffff;
   justify-content: flex-start;
   padding: 3%;
+  margin: 3%;
 }
 .cart-wrapper .bottom-logo span, .cart-wrapper .bottom-logo article {
   background-color: inherit;
