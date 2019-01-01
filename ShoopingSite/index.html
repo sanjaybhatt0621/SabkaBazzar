@@ -6,6 +6,9 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/build/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/build/cart.css" />
+    <link rel="shortcut icon" href="">
+
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -24,7 +27,7 @@
                                 <nav>
                                     <ul>
                                         <li><a href="#">Home</a></li>
-                                        <li><a href="#">Products</a></li>
+                                        <li><a href="products.html">Products</a></li>
                                     </ul>
                                 </nav>
                         </article>    
@@ -36,7 +39,7 @@
                     </article>
                     <article class="cart">
                         <span class="cartImage">
-                            <img src="images/cart.svg" />
+                            <a href = "/#/cart">   <img src="images/cart.svg" /></a>
                             <span>0 items</span>
                         </span>
                         
@@ -99,6 +102,7 @@
         <footer class="footer">
             Copyright &#9400; 2011-2018 Sabka Bazzar Grocery Supplies Pvt Ltd
         </footer>
+        <div id="overlay"></div>
     </div>
     <script src="./dist/bundle.js"></script>
 </body>

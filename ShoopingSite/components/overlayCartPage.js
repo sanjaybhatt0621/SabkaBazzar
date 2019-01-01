@@ -1,16 +1,16 @@
-// import CartItemComponent from './CartItemComponent';
+import CartItemPage from './CartItemPage';
 
 export default class overlayCartPage
 {
     constructor(parent)
     {
-        this.parent;
+        this.parent = parent;
         this.render();        
     }
 
     render()
     {
-        let markup
+        let markUp
         =
         `<div class= "cartBackground">
             <div class="overlay-content">
@@ -32,18 +32,19 @@ export default class overlayCartPage
                             You won't find cheaper it anywhere
                         </span>
                     </section>
+                 </main>   
+                
+                
+                    <footer class="footerCart">
                     
-                </main>
-
-                <footer class="">
                     <p>Promo code can be applied on payment page</p>
                         <a href="#"><span>Proceed to checkout</span><span>Rs. 187   ></span></a>
-                </footer>
+                    </footer>
+                
             </div>
-         </div>   
-        `;
+         </div>`;
 
-        $(this.parent).html(markup);
+        $(this.parent).html(markUp);
 
         $('.close').on('click' , () => 
         {
@@ -51,6 +52,6 @@ export default class overlayCartPage
             history.back();
         });
 
-        new CartItemPage('.itemContainer');
+        new CartItemPage('.item-cart-containner'); //cart-item
     }
 }

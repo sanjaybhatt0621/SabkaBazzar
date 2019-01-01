@@ -24,16 +24,16 @@
         background-color: #eeeeee;
     }
 }
-.mainwrapper
-{
-    
+  
 
-    footer
+
+    .footerCart
     {
-        position:fixed;
+        //position:fixed;
+        
         bottom: 0;
         text-align: center;
-        width:100%;
+        //width:100%;
         background-color: #ffffff;
         p
         {
@@ -60,7 +60,7 @@
             }
         }
     }
-}
+
 .cart-wrapper
 {
     display: flex;
@@ -167,4 +167,40 @@
     
 }
 
-
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-right: 2%;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cartBackground{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+}
+.overlay-content{
+    display: flex;
+    background: white;
+    flex-direction: column;
+    margin:2% auto;
+    width: 35%;
+    height :90%;
+}

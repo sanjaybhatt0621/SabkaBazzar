@@ -26,7 +26,11 @@ export default class CartItemPage
                 </span>  
             </p>
         </article>
-    </section>    `;
+    </section>
+    
+
+    
+    `;
         $(this.parent).append(markUp);
     }
 }

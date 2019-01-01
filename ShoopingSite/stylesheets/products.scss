@@ -1,0 +1,211 @@
+$desktop: 900px;
+$mobile: 480px;
+$tablet: 680px;
+@mixin desktop
+{
+    @media(min-width: #{$desktop})
+    {
+        @content;
+    }
+}
+@mixin mobile
+{
+    @media(max-width: #{$mobile})
+    {
+        @content;
+    }
+}
+@mixin tablet
+{
+    @media(max-width: #{$tablet})
+    {
+        @content;
+    }
+}
+
+.mainProducts
+{
+    display: flex;
+    flex-direction: column;
+    @include desktop
+    {
+    margin:0 10%;
+    
+    flex-direction: row;
+    }
+
+}
+.leftSection
+{
+    background-color: #BD2A57;
+    @include desktop
+    {
+    background-color: #cccccc;
+    width:20%;
+    }
+    ul
+    {
+        li
+        {
+            border-bottom: 2px solid #eeeccc;
+            padding:3% 5%;
+            @include desktop
+            {
+            padding:5% 10%;
+            }
+            a
+            {
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+        }
+        li.init
+        {
+            cursor:pointer;
+            color:#ffffff;
+        }
+        li:not(.init)
+        {
+            display:none;
+        }
+    }
+    
+}
+
+.rightSection
+{
+    
+    
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    //border-bottom: 1px dotted #cccccc;
+    //background-color: #cccccc;
+    
+    @include desktop
+    {
+        flex-direction: row;
+        max-width:80%;
+        .itemSection
+        {
+            max-width: 25%;
+            
+            
+        .itemWrapperDiv
+            {
+                padding:10% 5%;
+                h1
+                {
+                    padding : 2%;
+                    font-size: 1.3em;
+                    
+                }
+                .productsDiv
+                {
+                    max-width:100%;
+                    padding-top:25%;
+                    //height:80%;
+                    img
+                    {
+                        max-width:100%;
+                        max-height: 80%;
+                    }
+                }
+                .productsDescription
+                {
+                    margin:5% 0%;
+                    padding:5%;
+                    background-color: #cccccc;
+                    //max-height:68px;
+                }
+                .priceandBuySection
+                {
+                    display:flex;
+                    flex-direction: row;
+                   justify-content: space-between;
+                    align-items: center;
+                   .mrp
+                   {
+                    margin:0% 2%;
+                   }
+                    span 
+                    {
+                        width:50%;
+                        a
+                        {
+                            background-color: #BD2A57;
+                            color: #ffffff;
+                            padding:5%;
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+                .buyNowMobile
+                {
+                    display: none;
+                }
+            }
+        }
+
+    }
+    @include mobile
+    {
+    .itemSection
+    {
+        max-width:100%;
+        border-bottom: 1px dotted black;
+        .itemWrapperDiv
+        {
+            margin:5% 5% 0% 5%;
+            
+            h1
+                {
+                    padding : 2%;
+                    font-size: 1.3em;
+                    margin:5% 0%;
+                }
+                .descContainner
+                {  
+                    display: flex;
+                    flex-direction: row;
+                    .productsDiv
+                    {
+                        max-width:50%;   
+                        img
+                            {
+                                max-width:100%;
+                            }
+                    }
+                    .productRightMobile
+                    {
+                        max-width: 50%;
+
+                        .productsDescription
+                        {
+                            background-color: #cccccc;
+                        }
+
+                        .priceandBuySection
+                        {
+                           display:none;
+                        }
+                        .buyNowMobile
+                        {
+                            a
+                            {
+                                text-decoration: none;
+                                color:#ffffff;
+                                background-color: #BD2A57;
+                                display: block;
+                                margin: 15% 0%;
+                                text-align: center;
+                                padding: 8%;
+                            }
+                        }
+                    }
+                }    
+        }
+    }
+    }
+}
