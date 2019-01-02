@@ -3,9 +3,9 @@ export default class serviceFile
         constructor()
         {
             this.categoryURL = "http://localhost:5000/categories";
-            this.bannerURL = "http://localhost:3000/banners";
-            this.productURL = "http://localhost:3000/products";
-            this.addtoCartURL = "http://localhost:3000/addToCart";
+            this.bannerURL = "http://localhost:5000/banners";
+            this.productURL = "http://localhost:5000/products";
+            this.addtoCartURL = "http://localhost:5000/addToCart";
         }
 
         async getCategoryData()
@@ -60,4 +60,5 @@ export default class serviceFile
             }
         }
 
+        
 }

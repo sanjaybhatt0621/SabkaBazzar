@@ -38,6 +38,11 @@ q:before, q:after {
   font-size: 0.85em;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer {
   background-color: #cccccc;
   font-size: small;
@@ -54,6 +59,7 @@ body .containner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 2px solid #cccccc;
 }
 @media (min-width: 900px) {
   .header {
@@ -159,18 +165,6 @@ body .containner {
   display: flex;
   flex-direction: column;
 }
-.mainHome .category-containner .category:nth-child(odd) .menu-items {
-  order: 1;
-}
-.mainHome .category-containner .category:nth-child(odd) .description {
-  order: 2;
-}
-.mainHome .category-containner .category:nth-child(even) .menu-items {
-  order: 2;
-}
-.mainHome .category-containner .category:nth-child(even) .description {
-  order: 1;
-}
 .mainHome .category-containner .category {
   display: flex;
   flex-direction: row;
@@ -206,4 +200,191 @@ body .containner {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=style.css.map */
+.categoryBorder {
+  background: radial-gradient(at 50% 0, #8a8888, transparent 50%);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+}
+
+.category-containner:nth-child(odd) .category .description {
+  order: 2;
+  flex-direction: row-reverse;
+}
+
+/* img{
+  width :100%;
+} */
+/* Fading animation */
+* {
+  box-sizing: border-box;
+}
+
+.suggestions {
+  flex: 40%;
+  margin-top: 15%;
+}
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+}
+
+header.carouselHead {
+  text-align: center;
+  font-size: 1.5em;
+  padding-left: 21%;
+  padding-right: 20%;
+  line-height: 1.5em;
+  margin-top: 3%;
+}
+
+.mySlides {
+  display: none;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.prev {
+  display: none;
+}
+@media (min-width: 900px) {
+  .prev {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: #E0E1DC;
+  }
+  .prev:hover {
+    background-color: #999999;
+  }
+}
+
+.next {
+  display: none;
+}
+@media (min-width: 900px) {
+  .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: #E0E1DC;
+  }
+  .next:hover {
+    background-color: #999999;
+  }
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.imageDiv {
+  margin: 10%;
+  margin-top: 5%;
+}
+
+.carouselPrice {
+  text-align: center;
+  font-size: 2em;
+}
+
+.viewDetailContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewDetails {
+  background: none;
+  border: 1px solid lightgrey;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  background-color: white;
+  color: gray;
+  width: 60%;
+  box-sizing: content-box;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.carouselDots {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 4%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+@media (min-width: 900px) {
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 1%;
+  }
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

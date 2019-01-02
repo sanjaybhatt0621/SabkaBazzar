@@ -32,7 +32,9 @@ export default class ShoopingCartHomePage
                                 <p>${contentData.description}</p>
                                 <a href="">${contentData.key}</a>
                         </article>
-                        </section>`;
+                        </section>
+                        
+                        `;
 
                         $(this.keyItem).append(markup);
                     }

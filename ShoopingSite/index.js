@@ -1,6 +1,8 @@
-import ShoopingCartHomePage from './components/ShoopingCartHomePage';
+//import ShoopingCartHomePage from './components/ShoopingCartHomePage';
 import overlayCartPage from './components/overlayCartPage';
 import Utils from './services/Utils';
+import HomePage from './components/HomePage';
+import ProductPage from './components/ProductPage'
 
 
 export default class MainComponent
@@ -16,17 +18,19 @@ export default class MainComponent
     {
         let routes = 
         {
-             '/':ShoopingCartHomePage,
-            '/cart': overlayCartPage
+            '/':HomePage,
+            '/cart': overlayCartPage,
+            '/products/:id':ProductPage
+
         }
         let router = () => 
         {
-            const content = document.getElementsByClassName('.category-containner'); 
+            const content = document.getElementsByClassName('.mainHome'); 
 
 
             
             let request = this.utils.parseRequestURL();
-            let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? ':/id' : '') + (request.verb ? '/' + request.verb : '');
+            let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '');
             let page = routes[parsedURL] ? routes[parsedURL] : Error404
             if(parsedURL == '/cart')
             {
@@ -34,7 +38,7 @@ export default class MainComponent
             }
             else
             {
-                new page(".category-containner",request);
+                new page(".mainHome",request);
             }
         }
 

@@ -94,17 +94,18 @@ $tablet: 680px;
         .itemWrapperDiv
             {
                 padding:10% 5%;
+                
                 h1
                 {
                     padding : 2%;
                     font-size: 1.3em;
-                    
+                    height: 40px;
                 }
                 .productsDiv
                 {
                     max-width:100%;
                     padding-top:25%;
-                    //height:80%;
+                    height:80%;
                     img
                     {
                         max-width:100%;
@@ -116,7 +117,8 @@ $tablet: 680px;
                     margin:5% 0%;
                     padding:5%;
                     background-color: #cccccc;
-                    //max-height:68px;
+                    height:52px;
+                    overflow: hidden;
                 }
                 .priceandBuySection
                 {
@@ -184,6 +186,7 @@ $tablet: 680px;
                         .productsDescription
                         {
                             background-color: #cccccc;
+                           // overflow: hidden;
                         }
 
                         .priceandBuySection
