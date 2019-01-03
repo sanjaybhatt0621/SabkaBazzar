@@ -7,16 +7,28 @@ export default class CategoriesComponent{
         this.render();
     }
     render(){
+                var count =0;
         this.serviceFile.getCategoryData().then((result)=>{
             result.forEach(categoryData => {
+                count++;
                 let flag=`${categoryData.enabled}`;
                 if(flag=="true"){
                     let markup =
-                   `<ul>
-                   <li class="init">
-                   <a href = "#/products/${categoryData.id}">${categoryData.name}</a>
-                   </li>
-                   </ul>`;
+                    `
+                    <li class="init">
+                    <a href = "#/products/${categoryData.id}">${categoryData.name}</a>
+                    </li>
+                     `;
+                    if(count>1)
+                    {
+                        markup=
+                        `
+                        <li>
+                        <a href = "#/products/${categoryData.id}">${categoryData.name}</a>
+                        </li>
+                         `;  
+                    }
+
 
                     $(this.parent).append(markup);
                 }

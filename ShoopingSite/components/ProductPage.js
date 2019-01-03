@@ -11,11 +11,27 @@ export default class ProductPage{
     
     render(){
         let markUp=`<main class="mainProducts">
-                <aside class="leftSection"></aside>
+                <aside class="leftSection">
+                <ul>
+                </ul>
+                </aside>
                 <section class="rightSection"></section>
         </main>`;
         $(this.parent).html(markUp);
-        new  CategoriesComponent(".leftSection");
+        new  CategoriesComponent(".leftSection ul");
         new ProductComponent(".rightSection",this.id);
+
+
+        $("ul").on("click", ".init", function() {
+            $(this).closest("ul").children('li:not(.init)').toggle();
+        });
+
+        var allOptions = $("ul").children('li:not(.init)');
+        $("ul").on("click", "li:not(.init)", function() {
+            allOptions.removeClass('selected');
+            $(this).addClass('selected');
+            $("ul").children('.init').html($(this).html());
+            allOptions.toggle();
+        });
     }
 }
