@@ -206,9 +206,8 @@ body .containner {
   background-repeat: no-repeat;
 }
 
-.category-containner:nth-child(odd) .category .description {
+.category:nth-child(4n) .menu-items {
   order: 2;
-  flex-direction: row-reverse;
 }
 
 /* img{
@@ -242,56 +241,6 @@ header.carouselHead {
   display: none;
   width: 90%;
   margin-left: 5%;
-}
-
-.prev {
-  display: none;
-}
-@media (min-width: 900px) {
-  .prev {
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: #E0E1DC;
-  }
-  .prev:hover {
-    background-color: #999999;
-  }
-}
-
-.next {
-  display: none;
-}
-@media (min-width: 900px) {
-  .next {
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    background-color: #E0E1DC;
-  }
-  .next:hover {
-    background-color: #999999;
-  }
 }
 
 .text {
@@ -346,6 +295,7 @@ header.carouselHead {
 
 .carouselDots {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .dot {
@@ -384,6 +334,55 @@ header.carouselHead {
   }
   to {
     opacity: 1;
+  }
+}
+.prev {
+  display: none;
+}
+@media (min-width: 900px) {
+  .prev {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: #E0E1DC;
+  }
+  .prev:hover {
+    background-color: #999999;
+  }
+}
+
+.next {
+  display: none;
+}
+@media (min-width: 900px) {
+  .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: #E0E1DC;
+  }
+  .next:hover {
+    background-color: #999999;
   }
 }
 

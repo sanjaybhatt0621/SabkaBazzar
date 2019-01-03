@@ -46,11 +46,12 @@ export default class ProductComponent{
                     ${productData.description}
                     </article>
                     <article class="priceandBuySection">
-                        <span class="mrp">MRP Rs.${productData.price}</span>
-                        <span><a>Buy Now</a></span>
+                        <span class="mrp" >MRP Rs.${productData.price}</span>
+                        <span id="add_${productData.id}"><a>Buy Now</a></span>
                     </article>
                     <article class="buyNowMobile">
-                        <a href="#">Buy Now @ MRP Rs. <span>87</span></a>
+                        <a href="#" >Buy Now @ MRP Rs. <span>${productData.price}</span></a>
+                       
                     </article>
             </article> 
         </section>        

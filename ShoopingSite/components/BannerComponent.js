@@ -36,7 +36,7 @@ export default class BannerComponent{
                         <article class="description">
                             <h2>${contentData.name}</h2>
                             <p>${contentData.description}</p>
-                            <a href="">Explore  &nbsp;${contentData.key}</a>
+                            <a href="#/products/${contentData.id}">Explore  &nbsp;${contentData.key}</a>
                     </article>
                     </section>
                     `;
