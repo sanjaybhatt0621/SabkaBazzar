@@ -3,7 +3,8 @@ import overlayCartPage from './components/overlayCartPage';
 import Utils from './services/Utils';
 import HomePage from './components/HomePage';
 import ProductPage from './components/ProductPage'
-
+import loginPage from './components/loginPage'
+import registerPage from './components/registerPage'
 
 export default class MainComponent
 {
@@ -20,8 +21,9 @@ export default class MainComponent
         {
             '/':HomePage,
             '/cart': overlayCartPage,
-            '/products/:id':ProductPage
-
+            '/products/:id':ProductPage,
+            '/login': loginPage,
+            '/register' : registerPage
         }
         let router = () => 
         {

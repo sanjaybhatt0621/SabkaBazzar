@@ -296,6 +296,7 @@ header.carouselHead {
 
 .carouselDots {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .dot {
@@ -353,6 +354,7 @@ header.carouselHead {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: #E0E1DC;
   }
   .prev:hover {
     background-color: #999999;
