@@ -14,7 +14,7 @@ export default class CartComponent{
         <main class="cartContainer">
         <section class="cartHeader">
                 <article class="cartInfo">
-                    <h1 class="cartItemLabel">My Cart  &nbsp;</h1><h3 class="cartItemCount"></h3>
+                    <span class="cartItemLabel">My Cart  &nbsp;</span><h3 class="cartItemCount"></h3>
                 </article>
                 <article class="close">&times;</article>
             </section>
@@ -35,7 +35,7 @@ export default class CartComponent{
             let bannerMarkup= 
                 `<section class="discountBanner" role="banner">
                     <article class="discountLogo">
-                        <img src="static/images/lowest-price.png" alt="">
+                        <img src="static/images/lowest-price.png" alt="discountLogoImage">
                     </article>
                     <article class="discountBannerText">
                         You won't find it cheaper anywhere

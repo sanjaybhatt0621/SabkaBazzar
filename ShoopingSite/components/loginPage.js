@@ -20,13 +20,13 @@ export default class loginPage
         <section class="rightLogin">
                 <form action="/#/login" >
                     <article class="textfield">
-                        <input type="text" class="inputText" required/>
-                        <span class="floating-label">Email</span>
+                        <input type="text" class="inputText" id="username" required/>
+                        <label for="username" class="floating-label">Email</span>
                     </article>
 
                     <article class="textfield">
-                        <input type="text" class="inputText" required/>
-                        <span class="floating-label">Password</span>
+                        <input type="text" class="inputText" id="password" required/>
+                        <label for="password" class="floating-label">Password</span>
                     </article>
 
                    <article>

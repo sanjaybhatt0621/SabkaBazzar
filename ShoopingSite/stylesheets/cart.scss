@@ -9,14 +9,30 @@ $background_color_1: rgba(0,0,0,0.5);
 $background_color_2: #ffffff;
 $background_color_3: inherit;
 $background_color_4: #BD2A57;
-$desktop:990px;
-
-@mixin desktop {
-    @media(min-width: #{$desktop}){
+$desktop: 980px;
+$mobile: 375px;
+$tablet: 768px;
+@mixin desktop
+{
+    @media(min-width: #{$desktop})
+    {
         @content;
     }
 }
-
+@mixin mobile
+{
+    @media(max-width: #{$mobile} )
+    {
+        @content;
+    }
+}
+@mixin tablet
+{
+    @media(min-width:#{$mobile} ) and (max-width: #{$tablet})
+    {
+        @content;
+    }
+}
 .close {
 	color: $color_1;
 	float: right;
@@ -170,9 +186,7 @@ $desktop:990px;
         font-weight: bold;
         font-size: 1.2em;
     }
-    p:nth-child(2){
-       
-    }
+   
 }
 .discountBanner {
 	background: $color_3;

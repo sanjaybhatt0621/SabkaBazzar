@@ -22,7 +22,7 @@ export default class CartItemComponent{
                 let markUp=
                     `<section class="cartItem" id="cartItem_${productData.id}">
                         <article class="cartItemImage">
-                            <img src="${productData.imageURL}"/>
+                            <img src="${productData.imageURL}" alt=""/>
                         </article>
                         <article class="cartItemText">
                             <h1>${productData.name}</h1>

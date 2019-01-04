@@ -1,7 +1,7 @@
 export default class ImageSliderPage{
     constructor(parent,carouselSuggestion){
         this.imgUrl=carouselSuggestion.bannerImageUrl;
-        
+        this.imgAlt = carouselSuggestion.bannerImageAlt;
         this.parent=parent;
         this.render();
     }
@@ -10,7 +10,7 @@ export default class ImageSliderPage{
         <div class="mySlides fade">
           
           
-            <img src=${this.imgUrl} style="width:100%">
+            <img src=${this.imgUrl} alt=${this.imgAlt} style="width:100%">
           
           
         </div>`;

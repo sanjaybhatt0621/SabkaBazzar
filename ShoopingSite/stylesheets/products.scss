@@ -1,6 +1,6 @@
-$desktop: 900px;
-$mobile: 480px;
-$tablet: 680px;
+$desktop: 980px;
+$mobile: 375px;
+$tablet: 980px;
 @mixin desktop
 {
     @media(min-width: #{$desktop})
@@ -10,18 +10,19 @@ $tablet: 680px;
 }
 @mixin mobile
 {
-    @media(max-width: #{$mobile})
+    @media(max-width: #{$mobile} )
     {
         @content;
     }
 }
 @mixin tablet
 {
-    @media(max-width: #{$tablet})
+    @media(min-width:#{$mobile} ) and (max-width: #{$tablet})
     {
         @content;
     }
 }
+
 
 .mainProducts
 {
@@ -33,6 +34,11 @@ $tablet: 680px;
     
     flex-direction: row;
     }
+    @include tablet
+    {
+        flex-direction: row;
+        
+    }
 
 }
 .leftSection
@@ -43,15 +49,24 @@ $tablet: 680px;
     background-color: #cccccc;
     width:20%;
     }
+    @include tablet
+            {
+                background-color: #cccccc;
+            }
     ul
     {
+        
         li
         {
-            border-bottom: 2px solid #eeeccc;
+            
             padding:3% 5%;
             @include desktop
             {
             padding:5% 10%;
+            }
+            @include tablet
+            {
+                background-color: #cccccc;
             }
             a
             {
@@ -59,15 +74,7 @@ $tablet: 680px;
                 font-size: 1.2em;
             }
         }
-        li.init
-        {
-            cursor:pointer;
-            color:#ffffff;
-        }
-        li:not(.init)
-        {
-            display:none;
-        }
+        
     }
     
 }
@@ -82,7 +89,7 @@ $tablet: 680px;
     //border-bottom: 1px dotted #cccccc;
     //background-color: #cccccc;
     
-    @include desktop
+    @include desktop 
     {
         flex-direction: row;
         max-width:80%;
@@ -151,6 +158,75 @@ $tablet: 680px;
         }
 
     }
+
+    @include tablet
+    {
+        flex-direction: row;
+        max-width:80%;
+        .itemSection
+        {
+            max-width: 25%;
+            
+            
+        .itemWrapperDiv
+            {
+                padding:10% 5%;
+                
+                h1
+                {
+                    padding : 2%;
+                    font-size: 1.3em;
+                    height: 40px;
+                }
+                .productsDiv
+                {
+                    max-width:100%;
+                    padding-top:25%;
+                    height:80%;
+                    img
+                    {
+                        max-width:100%;
+                        max-height: 80%;
+                    }
+                }
+                .productsDescription
+                {
+                    margin:5% 0%;
+                    padding:5%;
+                    background-color: #cccccc;
+                    height:52px;
+                    overflow: hidden;
+                }
+                .priceandBuySection
+                {
+                    display:flex;
+                    flex-direction: row;
+                   justify-content: space-between;
+                    align-items: center;
+                   .mrp
+                   {
+                    margin:0% 2%;
+                   }
+                    span 
+                    {
+                        width:50%;
+                        a
+                        {
+                            background-color: #BD2A57;
+                            color: #ffffff;
+                            padding:5%;
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+                .buyNowMobile
+                {
+                    display: none;
+                }
+            }
+        }  
+    }
     @include mobile
     {
     .itemSection
@@ -186,6 +262,9 @@ $tablet: 680px;
                         .productsDescription
                         {
                             background-color: #cccccc;
+                            height:50px;
+                            overflow: hidden;
+                
                            // overflow: hidden;
                         }
 
@@ -211,4 +290,12 @@ $tablet: 680px;
         }
     }
     }
+}
+.list-category
+{
+    @include mobile
+    {
+        display: none;
+    }
+    
 }

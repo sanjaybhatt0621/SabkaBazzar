@@ -11,27 +11,28 @@ export default class ProductPage{
     
     render(){
         let markUp=`<main class="mainProducts">
+        <input type="checkbox" id="filterDown"  style="display:none;">
                 <aside class="leftSection">
-                <ul>
-                </ul>
+                <section id = "productList"class="productMenu">
+                        <select class="productChoices">
+                            
+                        </select>
+                    </section>
+                    <ul class="list-category">
+                    </ul>
                 </aside>
                 <section class="rightSection"></section>
         </main>`;
         $(this.parent).html(markUp);
         new  CategoriesComponent(".leftSection ul");
         new ProductComponent(".rightSection",this.id);
+        $('#productList').on('change',this.changeURL); 
 
-
-        $("ul").on("click", ".init", function() {
-            $(this).closest("ul").children('li:not(.init)').toggle();
-        });
-
-        var allOptions = $("ul").children('li:not(.init)');
-        $("ul").on("click", "li:not(.init)", function() {
-            allOptions.removeClass('selected');
-            $(this).addClass('selected');
-            $("ul").children('.init').html($(this).html());
-            allOptions.toggle();
-        });
+        
     }
+    changeURL(){
+        let hashValue=$('#productList :selected').val();
+        sessionStorage.selectedText=$('#productList :selected').text();
+        window.location.href=hashValue;
+        }
 }

@@ -8,6 +8,9 @@ export default class CategoriesComponent{
     }
     render(){
                 var count =0;
+                $(".productChoices").html(`<option value=""></option>`);
+                $('#productList :selected').text(sessionStorage.selectedText); 
+
         this.serviceFile.getCategoryData().then((result)=>{
             result.forEach(categoryData => {
                 count++;
@@ -15,22 +18,18 @@ export default class CategoriesComponent{
                 if(flag=="true"){
                     let markup =
                     `
-                    <li class="init">
-                    <a href = "#/products/${categoryData.id}">${categoryData.name}</a>
-                    </li>
-                     `;
-                    if(count>1)
-                    {
-                        markup=
-                        `
-                        <li>
+                    
+                    
+                    <li>
                         <a href = "#/products/${categoryData.id}">${categoryData.name}</a>
-                        </li>
-                         `;  
-                    }
+                    </li>
+                    
+                     `;
+                     let optionMarkup =`<option class="categoryOptions" value ="#/products/${categoryData.id}">${categoryData.name}</option>`
 
 
                     $(this.parent).append(markup);
+                    $(".productChoices").append(optionMarkup);
                 }
             });
         });

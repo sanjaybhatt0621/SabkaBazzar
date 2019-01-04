@@ -31,7 +31,7 @@ export default class BannerComponent{
                         <section class="category ">
                         
                     <article class="menu-items">
-                            <img src="${contentData.imageUrl}"/>
+                            <img src="${contentData.imageUrl}" alt="${contentData.key}"/>
                         </article>
                         <article class="description">
                             <h2>${contentData.name}</h2>

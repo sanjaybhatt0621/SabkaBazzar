@@ -39,18 +39,18 @@ export default class ProductComponent{
         <h1>${productData.name}</h1>
         <section class="descContainner">
             <article class="productsDiv">
-                    <img src="${productData.imageURL}">
+                    <img src="${productData.imageURL}" alt="${productData.name}">
             </article>
-            <article class="productRightMobile">
+            <article class="productRightMobile" id="add_${productData.id}">
                     <article class="productsDescription">
                     ${productData.description}
                     </article>
                     <article class="priceandBuySection">
                         <span class="mrp" >MRP Rs.${productData.price}</span>
-                        <span id="add_${productData.id}"><a>Buy Now</a></span>
+                        <span ><a>Buy Now</a></span>
                     </article>
-                    <article class="buyNowMobile">
-                        <a href="#" >Buy Now @ MRP Rs. <span>${productData.price}</span></a>
+                    <article class="buyNowMobile" >
+                        <a >Buy Now @ MRP Rs. <span>${productData.price}</span></a>
                        
                     </article>
             </article> 

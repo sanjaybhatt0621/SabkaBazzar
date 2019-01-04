@@ -2,9 +2,14 @@
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   .mainProducts {
     margin: 0 10%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 375px) and (max-width: 980px) {
+  .mainProducts {
     flex-direction: row;
   }
 }
@@ -12,31 +17,33 @@
 .leftSection {
   background-color: #BD2A57;
 }
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   .leftSection {
     background-color: #cccccc;
     width: 20%;
   }
 }
+@media (min-width: 375px) and (max-width: 980px) {
+  .leftSection {
+    background-color: #cccccc;
+  }
+}
 .leftSection ul li {
-  border-bottom: 2px solid #eeeccc;
   padding: 3% 5%;
 }
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   .leftSection ul li {
     padding: 5% 10%;
+  }
+}
+@media (min-width: 375px) and (max-width: 980px) {
+  .leftSection ul li {
+    background-color: #cccccc;
   }
 }
 .leftSection ul li a {
   text-decoration: none;
   font-size: 1.2em;
-}
-.leftSection ul li.init {
-  cursor: pointer;
-  color: #ffffff;
-}
-.leftSection ul li:not(.init) {
-  display: none;
 }
 
 .rightSection {
@@ -44,7 +51,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
-@media (min-width: 900px) {
+@media (min-width: 980px) {
   .rightSection {
     flex-direction: row;
     max-width: 80%;
@@ -99,7 +106,62 @@
     display: none;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 980px) {
+  .rightSection {
+    flex-direction: row;
+    max-width: 80%;
+  }
+  .rightSection .itemSection {
+    max-width: 25%;
+  }
+  .rightSection .itemSection .itemWrapperDiv {
+    padding: 10% 5%;
+  }
+  .rightSection .itemSection .itemWrapperDiv h1 {
+    padding: 2%;
+    font-size: 1.3em;
+    height: 40px;
+  }
+  .rightSection .itemSection .itemWrapperDiv .productsDiv {
+    max-width: 100%;
+    padding-top: 25%;
+    height: 80%;
+  }
+  .rightSection .itemSection .itemWrapperDiv .productsDiv img {
+    max-width: 100%;
+    max-height: 80%;
+  }
+  .rightSection .itemSection .itemWrapperDiv .productsDescription {
+    margin: 5% 0%;
+    padding: 5%;
+    background-color: #cccccc;
+    height: 52px;
+    overflow: hidden;
+  }
+  .rightSection .itemSection .itemWrapperDiv .priceandBuySection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rightSection .itemSection .itemWrapperDiv .priceandBuySection .mrp {
+    margin: 0% 2%;
+  }
+  .rightSection .itemSection .itemWrapperDiv .priceandBuySection span {
+    width: 50%;
+  }
+  .rightSection .itemSection .itemWrapperDiv .priceandBuySection span a {
+    background-color: #BD2A57;
+    color: #ffffff;
+    padding: 5%;
+    display: block;
+    text-align: center;
+  }
+  .rightSection .itemSection .itemWrapperDiv .buyNowMobile {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
   .rightSection .itemSection {
     max-width: 100%;
     border-bottom: 1px dotted black;
@@ -127,6 +189,8 @@
   }
   .rightSection .itemSection .itemWrapperDiv .descContainner .productRightMobile .productsDescription {
     background-color: #cccccc;
+    height: 50px;
+    overflow: hidden;
   }
   .rightSection .itemSection .itemWrapperDiv .descContainner .productRightMobile .priceandBuySection {
     display: none;
@@ -139,6 +203,12 @@
     margin: 15% 0%;
     text-align: center;
     padding: 8%;
+  }
+}
+
+@media (max-width: 375px) {
+  .list-category {
+    display: none;
   }
 }
 

@@ -2,9 +2,9 @@
 *{
     font-family: Dosis;
 }
-
-$desktop: 900px;
+$desktop: 980px;
 $mobile: 375px;
+$tablet: 768px;
 @mixin desktop
 {
     @media(min-width: #{$desktop})
@@ -14,11 +14,19 @@ $mobile: 375px;
 }
 @mixin mobile
 {
-    @media(max-width: #{$mobile})
+    @media(max-width: #{$mobile} )
     {
         @content;
     }
 }
+@mixin tablet
+{
+    @media(min-width:#{$mobile} ) and (max-width: #{$tablet})
+    {
+        @content;
+    }
+}
+
 
 $colors : 
 (
@@ -104,7 +112,7 @@ body
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 2px solid #cccccc;
+    
     // box-shadow: 16px 6px 25px 8px #cccccc;
     // border-bottom: 3px solid #cccccc;
    
@@ -336,7 +344,7 @@ $background_color_2: white;
 .slideshow-container {
 	width: 100%;
 	position: relative;
-	
+	margin-top: 2%;
 }
 header.carouselHead {
 	text-align: center;
@@ -489,4 +497,34 @@ header.carouselHead {
 		background-color: #999999;
 	}
     }
+}
+.box-shadow
+{
+    box-shadow: 2px 13px 12px -6px #cccccc;
+}
+.productMenu{
+    display: block;
+   
+    @include desktop(){
+        display: none;
+    }
+    @include tablet
+    {
+        display: none;
+    }
+}
+
+
+.productChoices{
+width: 100%;
+background: #BD2A57;
+color: white;
+font-size: medium;
+font-weight: bold;
+padding:3%;
+outline: none;
+border: none;
+& option{
+    width: 50px;
+}
 }
