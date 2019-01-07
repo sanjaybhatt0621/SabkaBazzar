@@ -44,14 +44,16 @@
                     }
                 }
 
-                a
+                .submit-button
                 {
                     background-color: #BD2A57;
                     display: block;
                     color: #ffffff;
                     text-align: center;
                     padding:3%;
-                    text-decoration: none;
+                    width:100%;
+                    border:none;
+                    font-size: 1.2em;
                 }
             }
 
@@ -82,5 +84,35 @@
             top: 18px;
             transition: 0.2s ease all;
             }
+        }
+
+        .requirements {
+           
+            color: #999;
+            max-height: 0;
+            max-width: 400px;
+            overflow: wrap;
+            transition: 0.28s;
+            overflow: hidden;
+            color: red;
+            font-size: 0.8em;
+            font-style: italic;
+          }
+
+          input:focus:required:invalid {
+            & ~ .requirements {
+                max-height: 200px;
+            }
+        }
+        //input:not(:focus):not(:placeholder-shown):required:invalid {border: 2px solid red;}
+
+        input:required:valid { border: none; }
+        form:invalid> a {
+            pointer-events: none;
+        }
+        .sign-screen-input-field {
+            font-size: 14px;
+            width: 400px;
+            height: 65px;
         }
 }

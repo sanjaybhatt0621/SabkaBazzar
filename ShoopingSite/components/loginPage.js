@@ -18,19 +18,21 @@ export default class loginPage
         </section>
         
         <section class="rightLogin">
-                <form action="/#/login" >
+                <form action="/#" >
                     <article class="textfield">
-                        <input type="text" class="inputText" id="username" required/>
-                        <label for="username" class="floating-label">Email</span>
+                        <input type="email" class="inputText" id="username" required/>
+                        <label for="username" class="floating-label">Email</label>
+                        <div class="requirements">Must be a valid email address.</div>
                     </article>
 
                     <article class="textfield">
-                        <input type="text" class="inputText" id="password" required/>
-                        <label for="password" class="floating-label">Password</span>
+                        <input type="password" class="inputText" id="password" pattern="pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$"" required/>
+                        <label for="password" class="floating-label" >Password</label>
+                        <div class="requirements">Your password must be at least 6 characters as well as contain at least one character and one number.</div>
                     </article>
 
                    <article>
-                       <a href="">Login</a>
+                       <input type="submit" value="Login" class="submit-button"/>
                    </article>
 
 
